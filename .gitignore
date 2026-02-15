@@ -1,0 +1,17 @@
+# Ignore PDF files
+*.pdf
+
+# Ignore text files
+*.txt
+
+# Ignore CSV files
+*.csv
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+env/
+venv/
+
