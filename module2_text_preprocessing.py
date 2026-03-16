@@ -46,6 +46,7 @@ print("This prevents the model from treating 'NLP' and 'nlp' as different words.
 
 text_lower = raw_text.lower()
 print("Output:", text_lower)
+#Output: the cats are running quickly towards the garden!! nlp is amazing in 2026.
 
 # ==================================================
 # STAGE 2: REMOVE NUMBERS AND PUNCTUATION
@@ -59,6 +60,11 @@ text_clean = re.sub(r'\s+', ' ', text_clean).strip()
 
 print("Output:", text_clean)
 
+#STAGE 2: REMOVE NUMBERS AND PUNCTUATION
+#Description: Removing numbers and punctuation reduces noise.
+#This ensures the model focuses only on meaningful words.
+#Output: the cats are running quickly towards the garden nlp is amazing in
+
 # ==================================================
 # STAGE 3: TOKENIZATION
 # ==================================================
@@ -68,6 +74,11 @@ print("These tokens become the basic units for NLP processing.")
 
 tokens = word_tokenize(text_clean)
 print("Output:", tokens)
+
+#STAGE 3: TOKENIZATION
+#Description: Tokenization splits the cleaned text into individual words.
+#These tokens become the basic units for NLP processing.
+#Output: ['the', 'cats', 'are', 'running', 'quickly', 'towards', 'the', 'garden', 'nlp', 'is', 'amazing', 'in']
 
 # ==================================================
 # STAGE 4: STOPWORD REMOVAL
@@ -81,6 +92,11 @@ filtered_tokens = [word for word in tokens if word not in stop_words]
 
 print("Output:", filtered_tokens)
 
+#STAGE 4: STOPWORD REMOVAL
+#Description: Stopwords are common words (e.g., 'the', 'is', 'are') that carry minimal meaning.
+#Removing them reduces dimensionality and improves model efficiency.
+#Output: ['cats', 'running', 'quickly', 'towards', 'garden', 'nlp', 'amazing']
+
 # ==================================================
 # STAGE 5A: STEMMING
 # ==================================================
@@ -93,6 +109,11 @@ stemmed_tokens = [stemmer.stem(word) for word in filtered_tokens]
 
 print("Output:", stemmed_tokens)
 
+#STAGE 5A: STEMMING (PORTER STEMMER)
+#Description: Stemming reduces words to their root form by removing suffixes.
+#Note: The resulting word may not always be a valid dictionary word.
+#Output: ['cat', 'run', 'quickli', 'toward', 'garden', 'nlp', 'amaz']
+
 # ==================================================
 # STAGE 5B: LEMMATIZATION
 # ==================================================
@@ -104,6 +125,11 @@ lemmatizer = WordNetLemmatizer()
 lemmatized_tokens = [lemmatizer.lemmatize(word) for word in filtered_tokens]
 
 print("Output:", lemmatized_tokens)
+
+#STAGE 5B: LEMMATIZATION
+#Description: Lemmatization reduces words to their dictionary base form.
+#It is more accurate than stemming but computationally more expensive.
+#Output: ['cat', 'running', 'quickly', 'towards', 'garden', 'nlp', 'amazing']
 
 # ==================================================
 # FINAL OUTPUT COMPARISON
