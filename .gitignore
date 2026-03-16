@@ -1,20 +1,91 @@
-# Ignore PDF files
-*.pdf
+# ----------------------------
+# OS generated files
+# ----------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-# Ignore text files
-*.txt
-
-# Ignore CSV files
-*.csv
-
-# Ignore Python cache
+# ----------------------------
+# Python
+# ----------------------------
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
 
-# Ignore virtual environments
+# Python virtual environments
 env/
 venv/
+.venv/
+ENV/
 
-# Ignore Word documents
+# Jupyter
+.ipynb_checkpoints/
+
+# ----------------------------
+# Logs
+# ----------------------------
+*.log
+
+# ----------------------------
+# Data files
+# ----------------------------
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+*.parquet
+
+# ----------------------------
+# Documents
+# ----------------------------
+*.pdf
 *.docx
+*.pptx
+*.txt
 
+# ----------------------------
+# Media files
+# ----------------------------
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+
+# ----------------------------
+# IDE / Editors
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------------
+# Build / distribution
+# ----------------------------
+build/
+dist/
+*.egg-info/
+
+# ----------------------------
+# Environment variables
+# ----------------------------
+.env
+.env.*
+
+# ----------------------------
+# Mac specific
+# ----------------------------
+.AppleDouble
+.LSOverride
+._*
+
+# ----------------------------
+# Temporary files
+# ----------------------------
+tmp/
+temp/
+*.tmp
